@@ -939,13 +939,6 @@ function ProductDetail({ addToCart, toggleFavorite, favorites }: any) {
               referrerPolicy="no-referrer"
             />
           </motion.div>
-          <div className="grid grid-cols-4 gap-4">
-            {[1, 2, 3, 4].map(i => (
-              <div key={i} className="aspect-square rounded-md overflow-hidden bg-slate-50 border border-slate-100 cursor-pointer hover:opacity-70 transition-all shadow-sm">
-                <img src={`https://picsum.photos/seed/thumb${i}/200/200`} alt="Thumbnail" className="w-full h-full object-cover" />
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="flex flex-col">
