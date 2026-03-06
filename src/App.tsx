@@ -21,22 +21,8 @@ interface CartItem extends Product {
 
 // --- Mock Data ---
 const PRODUCTS: Product[] = [
-  { id: 16, name: "Havaianas Slim Borboletas", price: 129.00, image: "https://lh3.googleusercontent.com/d/1xMyqW_hX2sB1SNLIAW04tgyVdUnO44zm", category: "Complexo", color: "Branco", size: "37/38", rating: 5 },
-  { id: 1, name: "Jaqueta Bomber Caramelo", price: 99.00, image: "https://picsum.photos/seed/jacket1/400/500", category: "Basico", color: "Rosa", size: "38/39", rating: 5 },
-  { id: 2, name: "Conjunto Inverno Bege", price: 99.00, image: "https://picsum.photos/seed/winter1/400/500", category: "Simples", color: "Branco", size: "40/41", rating: 4 },
-  { id: 3, name: "Blazer Verde Oliva", price: 99.00, image: "https://picsum.photos/seed/blazer1/400/500", category: "Complexo", color: "Azul", size: "42/43", rating: 5 },
-  { id: 4, name: "Casaco Casual Marrom", price: 99.00, image: "https://picsum.photos/seed/coat1/400/500", category: "Basico", color: "Roxo", size: "44/45", rating: 3 },
-  { id: 5, name: "Suéter Tricô Creme", price: 99.00, image: "https://picsum.photos/seed/sweater1/400/500", category: "Simples", color: "Branco", size: "38/39", rating: 4 },
-  { id: 6, name: "Jaqueta Slim Verde", price: 99.00, image: "https://picsum.photos/seed/jacket2/400/500", category: "Complexo", color: "Azul", size: "40/41", rating: 5 },
-  { id: 7, name: "Cardigan Longo", price: 99.00, image: "https://picsum.photos/seed/cardigan1/400/500", category: "Basico", color: "Rosa", size: "42/43", rating: 4 },
-  { id: 8, name: "Blusa Gola Alta", price: 99.00, image: "https://picsum.photos/seed/blouse1/400/500", category: "Simples", color: "Roxo", size: "44/45", rating: 5 },
-  { id: 9, name: "Parka Utilitária", price: 99.00, image: "https://picsum.photos/seed/parka1/400/500", category: "Complexo", color: "Branco", size: "38/39", rating: 4 },
-  { id: 10, name: "Sobretudo Elegante", price: 149.00, image: "https://picsum.photos/seed/coat2/400/500", category: "Complexo", color: "Preto", size: "40/41", rating: 5 },
-  { id: 11, name: "T-Shirt Algodão", price: 49.00, image: "https://picsum.photos/seed/tshirt1/400/500", category: "Basico", color: "Branco", size: "38/39", rating: 4 },
-  { id: 12, name: "Calça Jeans Slim", price: 89.00, image: "https://picsum.photos/seed/jeans1/400/500", category: "Simples", color: "Azul", size: "42/43", rating: 4 },
-  { id: 13, name: "Vestido Floral", price: 129.00, image: "https://picsum.photos/seed/dress1/400/500", category: "Complexo", color: "Rosa", size: "38/39", rating: 5 },
-  { id: 14, name: "Saia Midi Plissada", price: 79.00, image: "https://picsum.photos/seed/skirt1/400/500", category: "Simples", color: "Roxo", size: "40/41", rating: 4 },
-  { id: 15, name: "Moletom Oversized", price: 119.00, image: "https://picsum.photos/seed/hoodie1/400/500", category: "Basico", color: "Cinza", size: "44/45", rating: 5 },
+  { id: 17, name: "Havaianas Original Top", price: 110.00, image: "https://lh3.googleusercontent.com/d/1sj8GYfTke9RkJdoV-MF6CgWCgQNCxemh", category: "Simples", color: "Café", size: "37/38", rating: 5 },
+  { id: 16, name: "Havaianas Slim Borboletas", price: 129.00, image: "https://lh3.googleusercontent.com/d/1xMyqW_hX2sB1SNLIAW04tgyVdUnO44zm", category: "Complexo", color: "Branco", size: "37/38", rating: 5 }
 ];
 
 const ITEMS_PER_PAGE = 6;
@@ -535,7 +521,7 @@ export default function App() {
                   <div>
                     <h4 className="font-black text-[10px] uppercase tracking-widest mb-4 text-slate-400">Cores</h4>
                     <div className="space-y-3">
-                      {["Branco", "Azul", "Roxo", "Rosa"].map(color => (
+                      {["Branco", "Azul", "Roxo", "Rosa", "Café"].map(color => (
                         <label key={color} className="flex items-center gap-3 cursor-pointer group">
                           <input
                             type="checkbox"
@@ -552,7 +538,7 @@ export default function App() {
                   <div>
                     <h4 className="font-black text-[10px] uppercase tracking-widest mb-4 text-slate-400">Tamanhos</h4>
                     <div className="space-y-3">
-                      {["38/39", "40/41", "42/43", "44/45"].map(size => (
+                      {["37/38", "38/39", "40/41", "42/43", "44/45"].map(size => (
                         <label key={size} className="flex items-center gap-3 cursor-pointer group">
                           <input
                             type="checkbox"
