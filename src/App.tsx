@@ -21,6 +21,10 @@ interface CartItem extends Product {
 
 // --- Mock Data ---
 const PRODUCTS: Product[] = [
+  { id: 21, name: "Conjunto Blogueirinha Pink", price: 50.00, image: "https://lh3.googleusercontent.com/d/1clYv5PoBf0_J89kVxG3kgWEje95H24KI", category: "Simples", color: "Rosa", size: "4", rating: 5 },
+  { id: 18, name: "Conjunto Blogueirinha Pérola", price: 85.00, image: "https://lh3.googleusercontent.com/d/1dhPbuK-onWFfNrQ965IApg2yj-GInVyj", category: "Complexo", color: "Branco Lilás", size: "6", rating: 5 },
+  { id: 19, name: "Conjunto Blogueirinha Salmão", price: 95.00, image: "https://lh3.googleusercontent.com/d/18-uJgJQTKJwk--xI0Cri8702wLJWjsIq", category: "Complexo", color: "Salmão", size: "6", rating: 5 },
+  { id: 20, name: "Conjunto Blogueirinha Floral", price: 60.00, image: "https://lh3.googleusercontent.com/d/1rmVn-y9dkK65As76lzWaJkTPjSC7f-a5", category: "Simples", color: "Floral", size: "8", rating: 5 },
   { id: 17, name: "Havaianas Original Top", price: 110.00, image: "https://lh3.googleusercontent.com/d/1sj8GYfTke9RkJdoV-MF6CgWCgQNCxemh", category: "Simples", color: "Café", size: "37/38", rating: 5 },
   { id: 16, name: "Havaianas Slim Borboletas", price: 129.00, image: "https://lh3.googleusercontent.com/d/1xMyqW_hX2sB1SNLIAW04tgyVdUnO44zm", category: "Complexo", color: "Branco", size: "37/38", rating: 5 }
 ];
@@ -28,6 +32,8 @@ const PRODUCTS: Product[] = [
 const ITEMS_PER_PAGE = 6;
 
 const WHATSAPP_NUMBER = "5511983086176";
+
+const ALL_SIZES = ["4", "6", "8", "37/38", "38/39", "40/41", "42/43", "44/45"];
 
 export default function App() {
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -521,7 +527,7 @@ export default function App() {
                   <div>
                     <h4 className="font-black text-[10px] uppercase tracking-widest mb-4 text-slate-400">Cores</h4>
                     <div className="space-y-3">
-                      {["Branco", "Azul", "Roxo", "Rosa", "Café"].map(color => (
+                      {["Branco", "Azul", "Roxo", "Rosa", "Café", "Branco Lilás", "Salmão", "Floral"].map(color => (
                         <label key={color} className="flex items-center gap-3 cursor-pointer group">
                           <input
                             type="checkbox"
@@ -537,17 +543,15 @@ export default function App() {
 
                   <div>
                     <h4 className="font-black text-[10px] uppercase tracking-widest mb-4 text-slate-400">Tamanhos</h4>
-                    <div className="space-y-3">
-                      {["37/38", "38/39", "40/41", "42/43", "44/45"].map(size => (
-                        <label key={size} className="flex items-center gap-3 cursor-pointer group">
-                          <input
-                            type="checkbox"
-                            className="w-5 h-5 rounded border-slate-200 bg-transparent text-slate-900 focus:ring-slate-200 transition-all"
-                            checked={selectedFilters.size.includes(size)}
-                            onChange={() => toggleFilter('size', size)}
-                          />
-                          <span className="text-sm text-slate-600 group-hover:text-slate-900 transition-all">{size}</span>
-                        </label>
+                    <div className="flex flex-wrap gap-2">
+                      {ALL_SIZES.map(size => (
+                        <button
+                          key={size}
+                          onClick={() => toggleFilter('size', size)}
+                          className={`w-10 h-10 flex items-center justify-center rounded-md border text-[10px] font-black transition-all ${selectedFilters.size.includes(size) ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
+                        >
+                          {size}
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -671,7 +675,7 @@ function Home({
             <div>
               <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Cor</h4>
               <div className="space-y-3">
-                {["Branco", "Azul", "Roxo", "Rosa"].map(color => (
+                {["Branco", "Azul", "Roxo", "Rosa", "Café", "Branco Lilás", "Salmão", "Floral"].map(color => (
                   <label key={color} className="flex items-center gap-3 cursor-pointer group">
                     <input
                       type="checkbox"
@@ -688,17 +692,15 @@ function Home({
             {/* Tamanho */}
             <div>
               <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Tamanho</h4>
-              <div className="space-y-3">
-                {["38/39", "40/41", "42/43", "44/45"].map(size => (
-                  <label key={size} className="flex items-center gap-3 cursor-pointer group">
-                    <input
-                      type="checkbox"
-                      className="w-4 h-4 rounded border-slate-200 bg-transparent text-slate-900 focus:ring-slate-200 transition-all"
-                      checked={selectedFilters.size.includes(size)}
-                      onChange={() => toggleFilter('size', size)}
-                    />
-                    <span className="text-sm text-slate-500 group-hover:text-slate-900 transition-all">{size}</span>
-                  </label>
+              <div className="flex flex-wrap gap-2">
+                {ALL_SIZES.map(size => (
+                  <button
+                    key={size}
+                    onClick={() => toggleFilter('size', size)}
+                    className={`w-10 h-10 flex items-center justify-center rounded-md border text-[10px] font-black transition-all ${selectedFilters.size.includes(size) ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
+                  >
+                    {size}
+                  </button>
                 ))}
               </div>
             </div>
@@ -750,7 +752,7 @@ function Home({
                   <div>
                     <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Cor</h4>
                     <div className="space-y-3">
-                      {["Branco", "Azul", "Roxo", "Rosa"].map(color => (
+                      {["Branco", "Azul", "Roxo", "Rosa", "Café", "Branco Lilás", "Salmão", "Floral"].map(color => (
                         <label key={color} className="flex items-center gap-3 cursor-pointer group">
                           <input
                             type="checkbox"
@@ -765,17 +767,15 @@ function Home({
                   </div>
                   <div className="col-span-2">
                     <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Tamanho</h4>
-                    <div className="flex flex-wrap gap-4">
-                      {["38/39", "40/41", "42/43", "44/45"].map(size => (
-                        <label key={size} className="flex items-center gap-3 cursor-pointer group">
-                          <input
-                            type="checkbox"
-                            className="w-4 h-4 rounded border-slate-200 bg-transparent text-slate-900 focus:ring-slate-200 transition-all"
-                            checked={selectedFilters.size.includes(size)}
-                            onChange={() => toggleFilter('size', size)}
-                          />
-                          <span className="text-sm text-slate-500 group-hover:text-slate-900 transition-all">{size}</span>
-                        </label>
+                    <div className="flex flex-wrap gap-2">
+                      {ALL_SIZES.map(size => (
+                        <button
+                          key={size}
+                          onClick={() => toggleFilter('size', size)}
+                          className={`w-10 h-10 flex items-center justify-center rounded-md border text-[10px] font-black transition-all ${selectedFilters.size.includes(size) ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
+                        >
+                          {size}
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -975,11 +975,11 @@ function ProductDetail({ addToCart, toggleFavorite, favorites }: any) {
             <div>
               <h4 className="font-black text-[10px] uppercase tracking-[0.2em] mb-4 text-slate-400">Tamanho</h4>
               <div className="flex flex-wrap gap-2">
-                {["38/39", "40/41", "42/43", "44/45"].map(s => (
+                {ALL_SIZES.map(s => (
                   <button 
                     key={s} 
                     onClick={() => setSelectedSize(s)}
-                    className={`px-6 py-3 rounded-md border text-xs font-black uppercase tracking-widest transition-all ${s === selectedSize ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
+                    className={`w-12 h-12 rounded-md border text-xs font-black uppercase tracking-widest transition-all flex items-center justify-center ${s === selectedSize ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
                   >
                     {s}
                   </button>
