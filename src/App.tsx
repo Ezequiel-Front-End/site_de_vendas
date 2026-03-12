@@ -21,19 +21,28 @@ interface CartItem extends Product {
 
 // --- Mock Data ---
 const PRODUCTS: Product[] = [
-  { id: 21, name: "Conjunto Blogueirinha Pink", price: 50.00, image: "https://lh3.googleusercontent.com/d/1clYv5PoBf0_J89kVxG3kgWEje95H24KI", category: "Simples", color: "Rosa", size: "4", rating: 5 },
-  { id: 18, name: "Conjunto Blogueirinha Pérola", price: 85.00, image: "https://lh3.googleusercontent.com/d/1dhPbuK-onWFfNrQ965IApg2yj-GInVyj", category: "Complexo", color: "Branco Lilás", size: "6", rating: 5 },
-  { id: 19, name: "Conjunto Blogueirinha Salmão", price: 95.00, image: "https://lh3.googleusercontent.com/d/18-uJgJQTKJwk--xI0Cri8702wLJWjsIq", category: "Complexo", color: "Salmão", size: "6", rating: 5 },
-  { id: 20, name: "Conjunto Blogueirinha Floral", price: 60.00, image: "https://lh3.googleusercontent.com/d/1rmVn-y9dkK65As76lzWaJkTPjSC7f-a5", category: "Simples", color: "Floral", size: "8", rating: 5 },
-  { id: 17, name: "Havaianas Original Top", price: 110.00, image: "https://lh3.googleusercontent.com/d/1sj8GYfTke9RkJdoV-MF6CgWCgQNCxemh", category: "Simples", color: "Café", size: "37/38", rating: 5 },
-  { id: 16, name: "Havaianas Slim Borboletas", price: 129.00, image: "https://lh3.googleusercontent.com/d/1xMyqW_hX2sB1SNLIAW04tgyVdUnO44zm", category: "Complexo", color: "Branco", size: "37/38", rating: 5 }
+  { id: 22, name: "Vestido de Festa Renda Princesa", price: 85.00, image: "https://lh3.googleusercontent.com/d/1gC7QK4PomPD3oV3b9p-HFulYKEXtf0uS", category: "Roupas", color: "Branco", size: "4", rating: 5 },
+  { id: 23, name: "Vestido Floral Blogueirinha Tule", price: 45.00, image: "https://lh3.googleusercontent.com/d/1X8zb7mzBzpM7JxaUa9TDXmmWk4lTMQgY", category: "Roupas", color: "Floral", size: "2", rating: 5 },
+  { id: 24, name: "Jardineira Jeans Salmão Luxúria", price: 60.00, image: "https://lh3.googleusercontent.com/d/1tbTRijNHPqYH2YXDLrQJYet6oZ8gzVr0", category: "Roupas", color: "Salmão", size: "2", rating: 5 },
+  { id: 25, name: "Vestido Modal Blog Coração", price: 48.00, image: "https://lh3.googleusercontent.com/d/1vLbsAJoUP093v5XVnd4fnW8fFifiXRj7", category: "Roupas", color: "Rosa", size: "2", rating: 5 },
+  { id: 26, name: "Vestido Aquarela Coração", price: 45.00, image: "https://lh3.googleusercontent.com/d/19gRnWB3-xMGPEeS4iOj6ZO3BkNIjoYuI", category: "Roupas", color: "Aquarela", size: "3", rating: 5 },
+  { id: 27, name: "Vestido Malha Azul Bebê Princesa", price: 45.00, image: "https://lh3.googleusercontent.com/d/1lWhFY1k_2nTLCzPhcWZ6MYsvfR_QZqiM", category: "Roupas", color: "Azul Bebê", size: "6", rating: 5 },
+  { id: 28, name: "Vestido Malha Azul Bebê Princesa (V2)", price: 45.00, image: "https://lh3.googleusercontent.com/d/17a9K9lCwXSNqrml3_l4i-yhXII6kkIuC", category: "Roupas", color: "Azul Bebê", size: "6", rating: 5 },
+  { id: 21, name: "Conjunto Blogueirinha Pink", price: 50.00, image: "https://lh3.googleusercontent.com/d/1clYv5PoBf0_J89kVxG3kgWEje95H24KI", category: "Roupas", color: "Rosa", size: "4", rating: 5 },
+  { id: 18, name: "Conjunto Blogueirinha Pérola", price: 85.00, image: "https://lh3.googleusercontent.com/d/1dhPbuK-onWFfNrQ965IApg2yj-GInVyj", category: "Roupas", color: "Branco Lilás", size: "6", rating: 5 },
+  { id: 19, name: "Conjunto Blogueirinha Salmão", price: 95.00, image: "https://lh3.googleusercontent.com/d/18-uJgJQTKJwk--xI0Cri8702wLJWjsIq", category: "Roupas", color: "Salmão", size: "6", rating: 5 },
+  { id: 20, name: "Conjunto Blogueirinha Floral", price: 60.00, image: "https://lh3.googleusercontent.com/d/1rmVn-y9dkK65As76lzWaJkTPjSC7f-a5", category: "Roupas", color: "Floral", size: "8", rating: 5 },
+  { id: 17, name: "Havaianas Original Top", price: 110.00, image: "https://lh3.googleusercontent.com/d/1sj8GYfTke9RkJdoV-MF6CgWCgQNCxemh", category: "Chinelos", color: "Café", size: "23/24", rating: 5 },
+  { id: 16, name: "Havaianas Slim Borboletas", price: 129.00, image: "https://lh3.googleusercontent.com/d/1xMyqW_hX2sB1SNLIAW04tgyVdUnO44zm", category: "Chinelos", color: "Branco", size: "23/24", rating: 5 }
 ];
 
 const ITEMS_PER_PAGE = 6;
 
 const WHATSAPP_NUMBER = "5511983086176";
 
-const ALL_SIZES = ["4", "6", "8", "37/38", "38/39", "40/41", "42/43", "44/45"];
+const CLOTHING_SIZES = ["2", "3", "4", "6", "8"];
+const FOOTWEAR_SIZES = ["17/18", "19/20", "21/22", "23/24", "25/26", "27/28", "29/30", "31/32", "33/34"];
+const ALL_SIZES = [...CLOTHING_SIZES, ...FOOTWEAR_SIZES];
 
 export default function App() {
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -144,7 +153,7 @@ export default function App() {
               <Menu className="w-6 h-6" />
             </button>
             <Link to="/" className="text-xl md:text-2xl font-black tracking-tighter text-slate-900 whitespace-nowrap">
-              LOJA VIRTUAL
+              CLOSET WEPINK KIDS
             </Link>
             <div className="relative max-w-md w-full hidden md:block">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -216,7 +225,7 @@ export default function App() {
       <footer className="bg-slate-900 text-white py-20 mt-40">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-6">
-            <h3 className="text-2xl font-black tracking-tighter">LOJA VIRTUAL</h3>
+            <h3 className="text-2xl font-black tracking-tighter">CLOSET WEPINK KIDS</h3>
             <p className="text-slate-400 text-sm leading-relaxed">Sua boutique online definitiva para moda contemporânea e acessórios de luxo.</p>
             <div className="flex gap-4 pt-4">
               <a href="#" className="w-10 h-10 rounded-md bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-all text-white">
@@ -271,7 +280,7 @@ export default function App() {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 mt-20 pt-10 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-slate-500 text-[10px] uppercase tracking-widest">© 2026 LOJA VIRTUAL. TODOS OS DIREITOS RESERVADOS.</p>
+          <p className="text-slate-500 text-[10px] uppercase tracking-widest">© 2026 CLOSET WEPINK KIDS. TODOS OS DIREITOS RESERVADOS.</p>
           <div className="flex items-center gap-8 text-slate-500 text-[10px] font-black uppercase tracking-widest">
             <span>Brasil</span>
             <span>Segurança Garantida</span>
@@ -510,7 +519,7 @@ export default function App() {
                   <div>
                     <h4 className="font-black text-[10px] uppercase tracking-widest mb-4 text-slate-400">Categorias</h4>
                     <div className="space-y-3">
-                      {["Basico", "Simples", "Complexo"].map(cat => (
+                      {["Roupas", "Chinelos"].map(cat => (
                         <label key={cat} className="flex items-center gap-3 cursor-pointer group">
                           <input
                             type="checkbox"
@@ -542,13 +551,28 @@ export default function App() {
                   </div>
 
                   <div>
-                    <h4 className="font-black text-[10px] uppercase tracking-widest mb-4 text-slate-400">Tamanhos</h4>
+                    <h4 className="font-black text-[10px] uppercase tracking-widest mb-4 text-slate-400">Tamanhos Roupas</h4>
                     <div className="flex flex-wrap gap-2">
-                      {ALL_SIZES.map(size => (
+                      {CLOTHING_SIZES.map(size => (
                         <button
                           key={size}
                           onClick={() => toggleFilter('size', size)}
                           className={`w-10 h-10 flex items-center justify-center rounded-md border text-[10px] font-black transition-all ${selectedFilters.size.includes(size) ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
+                        >
+                          {size}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-black text-[10px] uppercase tracking-widest mb-4 text-slate-400">Tamanhos Chinelos</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {FOOTWEAR_SIZES.map(size => (
+                        <button
+                          key={size}
+                          onClick={() => toggleFilter('size', size)}
+                          className={`w-12 h-10 flex items-center justify-center rounded-md border text-[10px] font-black transition-all ${selectedFilters.size.includes(size) ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
                         >
                           {size}
                         </button>
@@ -657,7 +681,7 @@ function Home({
             <div>
               <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Tipo</h4>
               <div className="space-y-3">
-                {["Basico", "Simples", "Complexo"].map(cat => (
+                {["Roupas", "Chinelos"].map(cat => (
                   <label key={cat} className="flex items-center gap-3 cursor-pointer group">
                     <input
                       type="checkbox"
@@ -689,15 +713,31 @@ function Home({
               </div>
             </div>
 
-            {/* Tamanho */}
+            {/* Tamanho Roupas */}
             <div>
-              <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Tamanho</h4>
+              <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Tamanho Roupas</h4>
               <div className="flex flex-wrap gap-2">
-                {ALL_SIZES.map(size => (
+                {CLOTHING_SIZES.map(size => (
                   <button
                     key={size}
                     onClick={() => toggleFilter('size', size)}
                     className={`w-10 h-10 flex items-center justify-center rounded-md border text-[10px] font-black transition-all ${selectedFilters.size.includes(size) ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Tamanho Chinelos */}
+            <div>
+              <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Tamanho Chinelos</h4>
+              <div className="flex flex-wrap gap-2">
+                {FOOTWEAR_SIZES.map(size => (
+                  <button
+                    key={size}
+                    onClick={() => toggleFilter('size', size)}
+                    className={`w-12 h-10 flex items-center justify-center rounded-md border text-[10px] font-black transition-all ${selectedFilters.size.includes(size) ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
                   >
                     {size}
                   </button>
@@ -736,7 +776,7 @@ function Home({
                   <div>
                     <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Tipo</h4>
                     <div className="space-y-3">
-                      {["Basico", "Simples", "Complexo"].map(cat => (
+                      {["Roupas", "Chinelos"].map(cat => (
                         <label key={cat} className="flex items-center gap-3 cursor-pointer group">
                           <input
                             type="checkbox"
@@ -766,13 +806,25 @@ function Home({
                     </div>
                   </div>
                   <div className="col-span-2">
-                    <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Tamanho</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {ALL_SIZES.map(size => (
+                    <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Tamanho Roupas</h4>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {CLOTHING_SIZES.map(size => (
                         <button
                           key={size}
                           onClick={() => toggleFilter('size', size)}
                           className={`w-10 h-10 flex items-center justify-center rounded-md border text-[10px] font-black transition-all ${selectedFilters.size.includes(size) ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
+                        >
+                          {size}
+                        </button>
+                      ))}
+                    </div>
+                    <h4 className="font-black text-[10px] uppercase tracking-widest mb-5 text-slate-400">Tamanho Chinelos</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {FOOTWEAR_SIZES.map(size => (
+                        <button
+                          key={size}
+                          onClick={() => toggleFilter('size', size)}
+                          className={`w-12 h-10 flex items-center justify-center rounded-md border text-[10px] font-black transition-all ${selectedFilters.size.includes(size) ? 'bg-slate-900 text-white border-slate-900' : 'border-slate-200 text-slate-400 hover:border-slate-900'}`}
                         >
                           {size}
                         </button>
@@ -975,7 +1027,7 @@ function ProductDetail({ addToCart, toggleFavorite, favorites }: any) {
             <div>
               <h4 className="font-black text-[10px] uppercase tracking-[0.2em] mb-4 text-slate-400">Tamanho</h4>
               <div className="flex flex-wrap gap-2">
-                {ALL_SIZES.map(s => (
+                {(product.category === "Chinelos" ? FOOTWEAR_SIZES : CLOTHING_SIZES).map(s => (
                   <button 
                     key={s} 
                     onClick={() => setSelectedSize(s)}
