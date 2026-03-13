@@ -41,7 +41,7 @@ const ITEMS_PER_PAGE = 6;
 const WHATSAPP_NUMBER = "5511983086176";
 
 const CLOTHING_SIZES = ["2", "3", "4", "6", "8"];
-const FOOTWEAR_SIZES = ["17/18", "19/20", "21/22", "23/24", "25/26", "27/28", "29/30", "31/32", "33/34"];
+const FOOTWEAR_SIZES = ["23/24"];
 const ALL_SIZES = [...CLOTHING_SIZES, ...FOOTWEAR_SIZES];
 
 export default function App() {
@@ -635,7 +635,7 @@ function Home({
       {/* --- Hero Section --- */}
       <section className="relative h-[400px] md:h-[500px] overflow-hidden bg-gray-900">
         <img
-          src="https://picsum.photos/seed/fashion-hero/1920/1080"
+          src="https://lh3.googleusercontent.com/d/1te3N-wHt7EKQ4ZmONkjTLmBFtvbfKpUk"
           alt="Hero"
           className="absolute inset-0 w-full h-full object-cover opacity-60"
           referrerPolicy="no-referrer"
@@ -647,7 +647,7 @@ function Home({
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-black uppercase leading-tight mb-6 max-w-2xl tracking-tighter"
           >
-            Elegance in <br /> every moment
+            Elegância em <br /> cada momento
           </motion.h2>
           <motion.button
             initial={{ opacity: 0, y: 20 }}
